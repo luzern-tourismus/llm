@@ -1,0 +1,1 @@
+<?phprequire_once 'config.php';(new \Nemundo\Project\Script\ProjectCleanScript())->run();require 'init.php';require 'setup.php';
