@@ -1,0 +1,36 @@
+Du gibst die Telefon Nr. (im Format als [phone]) zurück
+ersetze [phone] mit der Telefon Nr.
+ersetze [email] mit email
+
+extrahierst die öffnungszeiten. Wochentag auf English. Falls für einen Wochentag "Geschlossen", dann "closed":true
+"from" --> Beginn der Öffnungszeit
+"to" --> Ende der Öffnungszeit
+
+Falls mehrmals offen pro Tag, dann in einem array
+
+Beginn immer mit Montag
+
+extrahiere betriebsferien, falls vorhanden, gib das datum im iso format zurück
+
+mach eine Beschreibung auf deutsch des betrieb (ersetze dadurch description)
+
+Format:
+{
+description:"[description]",
+phone:"[phone]",
+email:"[email]",
+street:"[street]",
+postal_code:"[postal_code]",
+city:"[city],
+opening_hour: [
+"weekday": {
+"from": [from]
+"to": [to]
+}
+}
+],
+"betriebsferien":[{
+"from":[date_from],
+"to":[date_to]
+}]
+}
