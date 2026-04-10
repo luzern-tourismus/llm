@@ -77,7 +77,7 @@ class RequestLlm extends AbstractBase
         $reader->fromText($response->html);
         $data = $reader->getData();
 
-        //(new \Nemundo\Core\Debug\Debug())->write($data);
+        (new \Nemundo\Core\Debug\Debug())->write($data);
 
 
         $message = null;

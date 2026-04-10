@@ -1,0 +1,8 @@
+/config.ini
+/admin_web/
+/tmp/
+/.idea
+/composer.lock
+/vendor/
+/log/
+/data_redirect/
