@@ -17,7 +17,7 @@ class LlmFunction extends AbstractBase
      */
     private $parameterList = [];
 
-    public function __construct(RequestLlm $requestLlm)
+    public function __construct(AbstractRequestLlm $requestLlm)
     {
 
         $requestLlm->addFunction($this);

@@ -3,31 +3,29 @@
 namespace LuzernTourismus\Llm\Core;
 
 use Nemundo\Core\Base\AbstractBase;
-use Nemundo\Core\Debug\Debug;
 use Nemundo\Core\Json\JsonText;
 use Nemundo\Core\Json\Reader\JsonReader;
-use Nemundo\Core\TextFile\Writer\TextFileWriter;
 use Nemundo\Core\WebRequest\BearerAuthentication\JsonBearerAuthenticationWebRequest;
 
-class RequestLlm extends AbstractBase
+abstract class AbstractRequestLlm extends AbstractBase
 {
 
-    public $endpoint;
+    protected $endpoint;
 
-    public $token;
+    //protected $token;
 
-    public $userPrompt;
-
-
-    public $systemPrompt;
+    protected $userPrompt;
 
 
-    public $model;
+    protected $systemPrompt;
+
+
+    protected $model;
 
     /**
      * @var LlmFunction[]
      */
-    public $toolList = [];
+    protected $toolList = [];
 
     public function addFunction(LlmFunction $function)
     {
@@ -77,7 +75,7 @@ class RequestLlm extends AbstractBase
         $reader->fromText($response->html);
         $data = $reader->getData();
 
-        (new \Nemundo\Core\Debug\Debug())->write($data);
+        //(new \Nemundo\Core\Debug\Debug())->write($data);
 
 
         $message = null;
