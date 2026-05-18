@@ -2,7 +2,8 @@
     "name": "luzerntourismus/llm",
     "autoload": {
         "psr-4": {
-            "LuzernTourismus\\Llm\\": "src/"
+            "LuzernTourismus\\Llm\\": "src/",
+            "LuzernTourismus\\LlmTest\\": "src_test/"
         }
     },
     "authors": [

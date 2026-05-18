@@ -1,1 +1,1 @@
-<?phprequire 'vendor/autoload.php';(new \Nemundo\Project\Config\ProjectConfigConsoleScript())->buildConfig();
+<?phprequire 'vendor/autoload.php';(new \Nemundo\Project\Config\ProjectConfigConsoleScript())->buildConfig();(new \Nemundo\Db\Provider\MySql\Database\MySqlDatabase())->createDatabase();
